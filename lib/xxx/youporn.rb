@@ -1,7 +1,8 @@
 module Xxx
   class Youporn
-    URI = "http://youporn.com"
-    BROWSE_TIME= "/browse/time"
+    HOST = "youporn.com"
+    URI = "http://#{HOST}"
+    BROWSE_TIME_PATH = "/browse/time"
     ENTER_WEBSITE = lambda { |page| page.forms.first.click_button }
 
     def agent
@@ -9,13 +10,13 @@ module Xxx
     end
 
     def latest
-      agent.get("#{URI}#{BROWSE_TIME}", &ENTER_WEBSITE)
-      href = agent.page.links_with(:href => /watch/).first.href
-      uri(href)
+      agent.get(uri(BROWSE_TIME_PATH), &ENTER_WEBSITE)
+      path = agent.page.links_with(:href => /watch/).first.href
+      uri(path)
     end
 
-    def uri(href)
-      "#{URI}#{href}"
+    def uri(path)
+      "#{URI}#{path}"
     end
   end
 end
