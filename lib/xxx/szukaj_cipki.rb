@@ -4,12 +4,12 @@ module Xxx
 
     attr_accessor :doc, :link
 
-    def initialize
+    def agent
       @doc = Nokogiri::HTML(open(HOST))
     end
 
-    def porn_of_day
-      @link = HOST + @doc.css("ul#movies a").first['href']
+    def latest
+      @link = HOST + agent.css("ul#movies a").first['href']
     end
   end
 end
