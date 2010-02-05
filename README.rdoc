@@ -1,8 +1,17 @@
-= xxx
-
 == Usage
 
-  Xxx.watch_porn
+Install gem:
+  gem install xxx
+
+From your command line just type:
+  xxx
+
+You can specify option to choose a channel:
+  xxx -c youporn
+
+From your irb:
+  require 'xxx'
+  Xxx.watch_porn :youporn
 
 == Note on Patches/Pull Requests
 
@@ -16,4 +25,4 @@
 
 == Copyright
 
-Copyright (c) 2010 Jakub Kuźma. See LICENSE for details.
+Copyright (c) 2010 Jakub Kuźma, Wojciech Wnętrzak. See LICENSE for details.
