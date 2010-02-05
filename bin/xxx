@@ -2,8 +2,10 @@
 
 Version = "0.0.0"
 
-require 'optparse'
-require 'pp'
+require "optparse"
+require "pp"
+
+require "xxx"
 
 options = {}
 
@@ -17,8 +19,8 @@ optparse = OptionParser.new do|opts|
   opts.separator ""
   opts.separator "Specific options:"
 
-  opts.on("-s", "--source [SOURCE]", [:youporn, :szukajcipki], "Select source (youporn, szukajcipki)") do |source|
-    options[:source] = source
+  opts.on("-s", "--channel [CHANNEL]", [:youporn, :szukajcipki], "Select channel (youporn, szukajcipki)") do |channel|
+    options[:channel] = channel
   end
 
   opts.on("-h", "--help", "Display this screen") do
@@ -31,6 +33,4 @@ optparse.parse!
 
 command = ARGV.shift || "latest"
 
-# pp "Options:", options
-# pp "Command:", command
-# pp "ARGV:", ARGV
+Xxx.watch_porn(options[:channel], command)
