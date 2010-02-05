@@ -9,7 +9,10 @@ From your command line just type:
 You can specify option to choose a channel:
   xxx -c youporn
 
-From your irb:
+To see all options type:
+  xxx -h
+
+You can also launch porn from your irb:
   require 'xxx'
   Xxx.watch_porn :youporn
 

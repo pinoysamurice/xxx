@@ -8,6 +8,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "xxx"
     gem.summary = %Q{Porn of the day}
+    gem.description = %{To watch a porn just type from your command line: xxx}
     gem.email = "qoobaa@gmail.com"
     gem.homepage = "http://github.com/qoobaa/xxx"
     gem.authors = ["Jakub Kuźma", "Wojciech Wnętrzak"]
