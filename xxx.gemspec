@@ -5,12 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{xxx}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jakub Kuźma", "Wojciech Wnętrzak"]
   s.date = %q{2010-02-05}
   s.default_executable = %q{xxx}
+  s.description = %q{To watch a porn just type from your command line: xxx}
   s.email = %q{qoobaa@gmail.com}
   s.executables = ["xxx"]
   s.extra_rdoc_files = [
@@ -38,8 +39,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{Porn of the day}
   s.test_files = [
-    "test/test_xxx.rb",
-     "test/helper.rb"
+    "test/helper.rb",
+     "test/test_xxx.rb"
   ]
 
   if s.respond_to? :specification_version then
