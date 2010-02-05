@@ -1,6 +1,6 @@
 module Xxx
   class SzukajCipki
-    HOST = "http://szukajcipki.pl/"
+    HOST = "http://szukajcipki.pl"
 
     attr_accessor :doc, :link
 
