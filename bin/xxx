@@ -10,7 +10,7 @@ require "xxx"
 options = {}
 
 optparse = OptionParser.new do|opts|
-  opts.banner = "Usage: xxx [options] command\n"
+  opts.banner = "Usage: xxx [options] command"
 
   opts.separator ""
   opts.separator "Available commands:"
@@ -19,7 +19,7 @@ optparse = OptionParser.new do|opts|
   opts.separator ""
   opts.separator "Specific options:"
 
-  opts.on("-s", "--channel [CHANNEL]", [:youporn, :szukajcipki], "Select channel (youporn, szukajcipki)") do |channel|
+  opts.on("-c", "--channel [CHANNEL]", [:youporn, :szukajcipki], "Select channel (youporn, szukajcipki)") do |channel|
     options[:channel] = channel
   end
 
@@ -33,4 +33,8 @@ optparse.parse!
 
 command = ARGV.shift || "latest"
 
-Xxx.watch_porn(options[:channel], command)
+begin
+  Xxx.watch_porn(options[:channel], command)
+rescue Exception => e
+  abort("xxx: #{e.message}")
+end

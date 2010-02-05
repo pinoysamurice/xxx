@@ -5,12 +5,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{xxx}
-  s.version = ""
+  s.version = "0.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jakub Kuźma", "Wojciech Wnętrzak"]
   s.date = %q{2010-02-05}
+  s.default_executable = %q{xxx}
   s.email = %q{qoobaa@gmail.com}
+  s.executables = ["xxx"]
   s.extra_rdoc_files = [
     "LICENSE",
      "README.rdoc"
@@ -22,9 +24,13 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "bin/xxx",
      "lib/xxx.rb",
+     "lib/xxx/szukaj_cipki.rb",
+     "lib/xxx/youporn.rb",
      "test/helper.rb",
-     "test/test_xxx.rb"
+     "test/test_xxx.rb",
+     "xxx.gemspec"
   ]
   s.homepage = %q{http://github.com/qoobaa/xxx}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -41,9 +47,15 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<launchy>, [">= 0"])
+      s.add_runtime_dependency(%q<mechanize>, [">= 0"])
     else
+      s.add_dependency(%q<launchy>, [">= 0"])
+      s.add_dependency(%q<mechanize>, [">= 0"])
     end
   else
+    s.add_dependency(%q<launchy>, [">= 0"])
+    s.add_dependency(%q<mechanize>, [">= 0"])
   end
 end
 
