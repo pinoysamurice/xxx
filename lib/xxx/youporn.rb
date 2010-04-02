@@ -6,7 +6,7 @@ module Xxx
     ENTER_WEBSITE = lambda { |page| page.forms.first.click_button }
 
     def agent
-      @agent ||= WWW::Mechanize.new
+      @agent ||= Mechanize.new
     end
 
     def latest

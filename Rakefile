@@ -13,7 +13,7 @@ begin
     gem.homepage = "http://github.com/qoobaa/xxx"
     gem.authors = ["Jakub Kuźma", "Wojciech Wnętrzak"]
     gem.add_dependency "launchy"
-    gem.add_dependency "mechanize"
+    gem.add_dependency "mechanize", ">=1.0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
